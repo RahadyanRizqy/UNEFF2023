@@ -8,6 +8,7 @@
     <title>@yield('title')</title>
     <style>
         * {
+            color: black;
             background-color: white;
         }
     </style>
