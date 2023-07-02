@@ -26,4 +26,8 @@ Route::get('/', function () {
 Route::get('/admin-login', [AccountController::class, 'index'])->name('admin.login');
 Route::post('/admin-login', [AccountController::class, 'login'])->name('admin.check');
 Route::get('/logout', [AccountController::class, 'logout'])->name('admin.logout');
+
+// DASHBOARD
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+// Route::get('/dashboard/main', [DashboardController::class, 'index'])->name('dashboard.main');
+Route::get('/dashboard/{child}', [DashboardController::class, 'child'])->name('dashboard.child');

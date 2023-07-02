@@ -8,10 +8,8 @@
     </nav>
 </header>
 <section>
-<h1>Success</h1>
-<a href="/logout">Logout</a>
+<h1>Landing Page</h1>
 </section>
 <footer>
-
 </footer>
 @endsection

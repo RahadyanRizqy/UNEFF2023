@@ -4,20 +4,56 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 @endpush
 
+@push('style')
+<link rel="stylesheet" href="{{ asset('css/admin-login.css') }}">
+@endpush
+
 @section('title', 'Admin Login')
 
 @section('content')
-<h1>Admin Login</h1>
-<div class="form-group">
-    <label>User</label>
-    <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username">
+<div class="container">
+    <div class="wrapper">
+        <div class="title">
+            <img src="{{ asset('image/unefflogo.png') }}" alt="" width="25%" height="auto">
+            <span class="px-2">Admin Login</span>
+        </div>
+        <div class="warning-container">
+            @if($errors->any())
+            <div class="warning d-block mt-3 py-3">
+                @if ($errors->first('username'))
+                <ul id="errorList"><li>{{ $errors->first('username') }}</li></ul>
+                @elseif ($errors->first('password'))
+                <ul id="errorList"><li>{{ $errors->first('password') }}</li></ul>
+                @endif
+            </div>
+            @else
+            <div class="warning mt-3 py-3">
+                <ul id="errorList"></ul>
+            </div>
+            @endif
+        </div>
+        <form id="loginForm" action="{{ route('admin.check') }}" method="post">
+            @csrf
+            <div class="row">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="Masukkan username">
+            </div>
+            <div class="row">
+                <i class="fa-solid fa-key"></i>
+                <input type="password" id="password" name="password" placeholder="Masukkan Password">
+                <div>
+                    <i id="password-lock" class="fa-regular fa-eye-slash"></i>
+                </div>
+            </div>
+            <div>
+                <div class="row button">
+                    <button type="submit" class="btn" id="btn-login">Login</button>
+                </div>
+                <div class="signup-link"><a href="https://wa.me/6288804897436">Lupa password?</a></div>
+            </div>
+        </form>
+    </div>
 </div>
-<div class="form-group">
-    <label>Password</label>
-    <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password">
-</div>
-<p id="loginError" style="color: red"></p>
-<button class="btn btn-primary" id="btn-login">Login</button>
 @endsection
 
 @push('script')
