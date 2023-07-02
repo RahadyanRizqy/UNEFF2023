@@ -1,11 +1,17 @@
 @extends('master')
 
-@section('title', 'Unej Film Festival')
+@section('title', 'Unej Film Festival 2023')
     
 @section('content')
 <header>
-    <nav></nav>
+    <nav>
+    </nav>
 </header>
-<section></section>
-<footer></footer>
+<section>
+<h1>Success</h1>
+<a href="/logout">Logout</a>
+</section>
+<footer>
+
+</footer>
 @endsection
