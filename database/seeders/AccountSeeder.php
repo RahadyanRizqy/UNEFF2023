@@ -21,8 +21,8 @@ class AccountSeeder extends Seeder
                 'uneff2023',
             ],
             "password" => [
-                'Arlecchino?000',
-                'Tegalboto1964!'
+                'raden',
+                'uneff2023'
             ],
             "desc" => [
                 'admin pertama web dev',
