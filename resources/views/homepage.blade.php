@@ -8,7 +8,7 @@
     </nav>
 </header>
 <section>
-<h1>Success</h1>
+<h1>halo world</h1>
 <a href="/logout">Logout</a>
 </section>
 <footer>
