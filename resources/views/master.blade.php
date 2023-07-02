@@ -14,5 +14,6 @@
 </head>
 <body>
     @yield('content')
+    <h1>hallo</h1>
 </body>
 </html>
