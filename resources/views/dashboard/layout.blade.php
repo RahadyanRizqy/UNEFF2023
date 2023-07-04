@@ -1,6 +1,10 @@
 @extends('master')
 
-@section('title', 'Dashboard')
+@php
+    $title = 'Dashboard | ' . ucfirst($child)
+@endphp
+
+@section('title', $title)
 
 @section('content')
 <h1>Unej Film Festival 2023</h1>

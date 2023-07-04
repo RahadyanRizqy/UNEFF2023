@@ -47,7 +47,7 @@
             </div>
             <div>
                 <div class="row button">
-                    <button type="submit" class="btn" id="btn-login">Login</button>
+                    <button type="submit" id="btn-login">Login</button>
                 </div>
                 <div class="signup-link"><a href="https://wa.me/6288804897436">Lupa password?</a></div>
             </div>

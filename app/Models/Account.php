@@ -17,4 +17,8 @@ class Account extends Authenticatable
     ];
 
     public $timestamps = false;
+
+    public function post() {
+        return $this->hasMany(Post::class, 'author_id');
+    }
 }

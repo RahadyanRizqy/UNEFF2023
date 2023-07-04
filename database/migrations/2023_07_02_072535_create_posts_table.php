@@ -15,9 +15,17 @@ return new class extends Migration
             $table->id();
             $table->string("title", 255)->unique();
             $table->string("slug", 255)->unique();
+            $table->string("image")->nullable();
             $table->text("content")->nullable();
             $table->timestamp("posted_at");
             $table->timestamp("updated_at")->nullable();
+            $table->foreignId("author_id");
+
+            $table->foreign('author_id')
+                ->references('id')
+                ->on('accounts')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +32,4 @@ Route::get('/logout', [AccountController::class, 'logout'])->name('admin.logout'
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 // Route::get('/dashboard/main', [DashboardController::class, 'index'])->name('dashboard.main');
 Route::get('/dashboard/{child}', [DashboardController::class, 'child'])->name('dashboard.child');
+Route::resource('dashboard/posts', PostController::class);

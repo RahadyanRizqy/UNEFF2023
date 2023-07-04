@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         // ]);
         $seeders = [
             AccountSeeder::class,
+            PostSeeder::class,
         ];
 
         $this->call($seeders);
