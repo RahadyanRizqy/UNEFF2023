@@ -4,6 +4,10 @@
     $title = 'Dashboard | ' . ucfirst($child)
 @endphp
 
+@push('csrf-token')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+@endpush
+
 @push('style')
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Nunito:400,600|Open+Sans:400,600,700" rel="stylesheet">
@@ -25,10 +29,8 @@
                 <i class="fas fa-bars"></i>
             </a>
             <a href="{{ route('dashboard.child', 'main') }}" class="spur-logo">
-
-                    <img src="{{ asset('image/unefflogo2.png') }}" alt="" width="35%">
-                    {{-- <i class="fas fa-bolt"></i> --}}
-                    <span>UNEFF 2023</span>
+                <img src="{{ asset('image/unefflogo2.png') }}" alt="" width="35%">
+                <span>UNEFF 2023</span>
             </a>
         </header>
         <nav class="dash-nav-list">
@@ -75,26 +77,7 @@
         @endif
     </div>
 </div>
-{{-- <h1>Unej Film Festival 2023</h1>
-<ul>
-    <li>
-        <a href="{{ route('dashboard.child', 'main') }}">Dashboard</a>
-    </li>
-    <li>
-        <a href="{{ route('dashboard.child', 'profile') }}">Profile</a>
-    </li>
-    <li>
-        <a href="{{ route('dashboard.child', 'posts') }}">Posts</a>
-    </li>
-    <li>
-        <a href="{{ route('dashboard.child', 'rules') }}">Rules</a>
-    </li>
-    <li>
-        <a href="{{ route('admin.logout') }}">Logout</a>
-    </li>
-</ul> --}}
 @push('script')
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <script src="{{ asset('/js/spur.js') }}"></script>

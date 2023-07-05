@@ -41,7 +41,7 @@
                             <img src="{{ $post->image }}" alt="" class="post-img">
                         @endif
                     </div>
-                    <div class="card-body "> {{ $str->limit($post->content, $limit = 90, $end = '...') }} </div>
+                    <div class="card-body "> {{ $str->limit($post->content, $limit = 88, $end = '...') }} </div>
                     <div class="ml-2"> 
                         <p class="mb-0" style="font-size: 85%; color: rgba(0, 0, 0, 0.75)"> oleh 
                             <strong> {{ $post->author->username }} (admin) </strong> 

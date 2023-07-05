@@ -29,33 +29,6 @@ $(document).ready(function () {
         },
         buttonsStyling: false
     });
-    
-    // swalWithBootstrapButtons.fire({
-    //     title: 'Bener nih mo hapus postingan? 🤔',
-    //     text: "G bisa dibalikin loh...",
-    //     icon: 'warning',
-    //     showCancelButton: true,
-    //     confirmButtonText: 'Iyadah!',
-    //     cancelButtonText: 'Gajadi hehe...',
-    //     reverseButtons: true
-    // }).then((result) => {
-    //     if (result.isConfirmed) {
-    //       swalWithBootstrapButtons.fire(
-    //         'Selesai',
-    //         'Postingan sudah dihapus 😊',
-    //         'success'
-    //       )
-    //     } else if (
-    //       /* Read more about handling dismissals below */
-    //       result.dismiss === Swal.DismissReason.cancel
-    //     ) {
-    //       swalWithBootstrapButtons.fire(
-    //         'Dibatalin',
-    //         'Postingan tidak terhapus 😊',
-    //         'error'
-    //       )
-    //     }
-    // });
 
     $("#deleteForm").submit(function(event) {
       event.preventDefault(); // Prevent the form from submitting immediately

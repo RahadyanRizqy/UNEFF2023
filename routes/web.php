@@ -33,3 +33,6 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 // Route::get('/dashboard/main', [DashboardController::class, 'index'])->name('dashboard.main');
 Route::get('/dashboard/{child}', [DashboardController::class, 'child'])->name('dashboard.child');
 Route::resource('dashboard/posts', PostController::class);
+
+Route::get('/programs', [DashboardController::class, 'getJson']);
+Route::put('/programs/update', [DashboardController::class, 'updateJson'])->name('updateJson');
