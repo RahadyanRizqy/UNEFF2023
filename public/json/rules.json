@@ -4,8 +4,8 @@
         "Title": "Penerimaan Karya Unej Film Festival 2023",
         "Section": [
             {
-                "Title" : "Peraturan",
-                "List" : [
+                "Title": "Peraturan",
+                "List": [
                     "Ada peraturan yang harus dipatuhi",
                     "Ada persyaratan yang harus disesuaikan",
                     "Ada beberapa tambahan yang harus dilihat",
@@ -13,8 +13,8 @@
                 ]
             },
             {
-                "Title" : "Persyaratan",
-                "List" : [
+                "Title": "Persyaratan",
+                "List": [
                     "Persyaratan pertama",
                     "Persyaratan kedua",
                     "Persyaratan ketiga",
@@ -22,12 +22,21 @@
                 ]
             },
             {
-                "Title" : "Tambahan",
-                "List" : [
+                "Title": "Tambahan",
+                "List": [
                     "Tambahan pertama",
                     "Tambahan kedua",
                     "Tambahan ketiga",
                     "Tambahan keempat"
+                ]
+            },
+            {
+                "Title": "Jadi gini..",
+                "List": [
+                    "Kan kita udah lama...",
+                    "Ya nggapapa...",
+                    "Lah...",
+                    "Tambahin sendiri wkwk..."
                 ]
             }
         ]

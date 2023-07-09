@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 use function PHPUnit\Framework\throwException;
 
@@ -17,7 +18,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('template.layout', ['child' => 'posts']);
+        return view('dashboard.layout', ['child' => 'posts']);
     }
 
     /**
@@ -25,7 +26,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('template.layout', ['child' => 'add-post']);
+        return view('dashboard.layout', ['child' => 'forms/add-post']);
     }
 
     /**
@@ -67,7 +68,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('template.layout', ['child' => 'show-post', 'post' => $post]);
+        return view('dashboard.layout', ['child' => 'forms/show-post', 'post' => $post]);
     }
 
     /**
@@ -75,7 +76,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('template.layout', ['child' => 'edit-post', 'post' => $post]);
+        return view('dashboard.layout', ['child' => 'forms/edit-post', 'post' => $post]);
     }
 
     /**
@@ -99,10 +100,8 @@ class PostController extends Controller
                 $image->move($destinationPath, $profileImage);
                 $input['image'] = "$profileImage";
             } else if ($link = $request->input('image')) {
-                // Process link input
                 $input['image'] = $link;
             } else {
-                // No image or link provided, unset image from input
                 unset($input['image']);
             }
             $post->update($input);
@@ -118,8 +117,18 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        $post->delete();
-        sleep(1.5);
-        return to_route('posts.index');
+        $deleted = request()->input('deleted');
+        $filepath = 'image/' . $post->image;
+        
+        if ($deleted) {
+            if (File::exists(public_path($filepath))) {
+                File::delete(public_path($filepath));
+                $post->delete();
+                sleep(1.5);
+                return redirect()->route('posts.index');
+            } else {
+                dd("File doesn't exist");
+            }
+        }
     }
 }

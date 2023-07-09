@@ -64,6 +64,10 @@
             <h3 class="title-desc">Profil Admin</h3>
             @elseif ($child == 'add-post')
             <h3 class="title-desc">Penambahan Berita</h3>
+            @elseif ($child == 'edit-post')
+            <h3 class="title-desc">Pengubahan Berita</h3>
+            @elseif ($child == 'show-post')
+            <h3 class="title-desc">Tampilan Berita</h3>
             @else
             <h3 class="title-desc">Dashboard Utama</h3>
             @endif

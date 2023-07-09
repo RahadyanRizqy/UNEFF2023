@@ -24,15 +24,22 @@ Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Route::get('/admin-login', [AccountController::class, 'index'])->name('admin.login');
-Route::post('/admin-login', [AccountController::class, 'login'])->name('admin.check');
-Route::get('/logout', [AccountController::class, 'logout'])->name('admin.logout');
+Route::get('admin-login', [AccountController::class, 'index'])->name('admin.login');
+Route::post('admin-login', [AccountController::class, 'login'])->name('admin.check');
+Route::get('logout', [AccountController::class, 'logout'])->name('admin.logout');
 
 // DASHBOARD
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 // Route::get('/dashboard/main', [DashboardController::class, 'index'])->name('dashboard.main');
-Route::get('/dashboard/{child}', [DashboardController::class, 'child'])->name('dashboard.child');
+Route::get('dashboard/{child}', [DashboardController::class, 'child'])->name('dashboard.child');
 Route::resource('dashboard/posts', PostController::class);
 
-Route::get('/programs', [DashboardController::class, 'getJson']);
-Route::put('/programs/update', [DashboardController::class, 'updateJson'])->name('updateJson');
+// Route::get('/programs', [DashboardController::class, 'getJson']);
+// Route::put('/programs/update', [DashboardController::class, 'updateJson'])->name('updateJson');
+// Route::get('/programs2', [DashboardController::class, 'tampung']);
+
+Route::get('rules', [DashboardController::class, 'getRules']);
+Route::put('rules/update', [DashboardController::class, 'updateRules']);
+
+Route::get('profile', [DashboardController::class, 'getProfile']);
+Route::put('profile/update', [DashboardController::class, 'updateProfile']);
