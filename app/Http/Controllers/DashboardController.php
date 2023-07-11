@@ -34,7 +34,7 @@ class DashboardController extends Controller
         if ($child == 'posts') {
             $str = new Str;
             $carbon = new Carbon;
-            return view('template.layout', [
+            return view('dashboard.layout', [
                 'child' => $child, 
                 'posts' => Post::with('author')->get(), 
                 'str' => $str,
@@ -44,7 +44,7 @@ class DashboardController extends Controller
 
         if ($child == 'rules') {
             $rules = new Rule('json/rules.json');
-            return view('template.layout', [
+            return view('dashboard.layout', [
                 'child' => $child,
                 'rules' => $rules,
             ]);
@@ -52,12 +52,12 @@ class DashboardController extends Controller
 
         if ($child == 'profile') {
             $profile = $this->profile;
-            return view('template.layout', [
+            return view('dashboard.layout', [
                 'child' => $child,
                 'profile' => $profile,
             ]);
         }
-        return view('template.layout', ['child' => $child]);
+        return view('dashboard.layout', ['child' => $child]);
     }
 
     public function updateRules(Request $request)

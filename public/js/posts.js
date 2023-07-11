@@ -58,7 +58,21 @@ $(document).ready(function() {
                     'success'
                 );
                 form.find('input[name="deleted"]').val(isCheckboxChecked ? 'true' : 'false');
-                form.unbind('submit').submit();
+                
+                // Make the AJAX request
+                $.ajax({
+                    url: form.attr('action'),
+                    method: form.attr('method'),
+                    data: form.serialize(),
+                    success: function(response) {
+                        form.unbind('submit').submit();
+                        console.log(response);
+                    },
+                    error: function(error) {
+                        // Handle error response
+                        console.log(error);
+                    }
+                });
             } else if (result.dismiss === Swal.DismissReason.cancel) {
                 swalWithBootstrapButtons.fire(
                     'Dibatalin',

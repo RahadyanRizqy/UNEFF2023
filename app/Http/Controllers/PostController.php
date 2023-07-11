@@ -117,18 +117,21 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        $deleted = request()->input('deleted');
-        $filepath = 'image/' . $post->image;
-        
-        if ($deleted) {
-            if (File::exists(public_path($filepath))) {
-                File::delete(public_path($filepath));
-                $post->delete();
-                sleep(1.5);
-                return redirect()->route('posts.index');
-            } else {
-                dd("File doesn't exist");
-            }
-        }
+        $deleted = request()->input('deleted') === 'true';
+        // $filepath = 'image/' . $post->image;
+        $filepath = 'image/' . 'IMG20230710230108.jpg';
+        dd($deleted);
+        // if ($deleted) {
+        //     if (File::exists(public_path($filepath))) {
+        //         File::delete(public_path($filepath));
+        //         // $post->delete();
+        //         sleep(1.5);
+        //         return redirect()->route('posts.index');
+        //     } else {
+        //         dd("File doesn't exist");
+        //     }
+        // }
+        // $post->delete();
+        // return redirect()->route('posts.index');
     }
 }

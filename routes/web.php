@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('general.layout');
 });
 
 // Route::get('/wel', function() {
@@ -43,3 +44,5 @@ Route::put('rules/update', [DashboardController::class, 'updateRules']);
 
 Route::get('profile', [DashboardController::class, 'getProfile']);
 Route::put('profile/update', [DashboardController::class, 'updateProfile']);
+
+Route::get('news', [NewsController::class, 'index'])->name('news.index');
