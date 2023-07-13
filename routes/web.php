@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\NewsController;
+use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +18,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('general.layout');
+    return view('general.layout', ['child' => 'home']);
+});
+
+Route::get('/home', function() {
+    return view('general.layout', ['child' => 'home']);
 });
 
 // Route::get('/wel', function() {
@@ -45,4 +49,8 @@ Route::put('rules/update', [DashboardController::class, 'updateRules']);
 Route::get('profile', [DashboardController::class, 'getProfile']);
 Route::put('profile/update', [DashboardController::class, 'updateProfile']);
 
-Route::get('news', [NewsController::class, 'index'])->name('news.index');
+Route::get('news', [GeneralController::class, 'news'])->name('general.news');
+Route::get('juries', [GeneralController::class, 'jury'])->name('general.jury');
+Route::get('event', [GeneralController::class, 'profile_detail'])->name('general.event');
+Route::get('submit_work', [GeneralController::class, 'submit_work'])->name('general.submit_work');
+Route::get('news/{post}', [GeneralController::class, 'news_specific'])->name('news.specific');

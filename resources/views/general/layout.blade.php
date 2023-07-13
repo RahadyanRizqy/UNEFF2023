@@ -13,8 +13,8 @@
 @section('content')
 <nav class="navbar main-nav border-less fixed-top navbar-expand-lg p-0">
     <div class="container-fluid p-0">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="image/banner-event.png" alt="logo" width="130" height="auto">
+        <a class="navbar-brand" href="{{ url('/home') }}">
+            <img src="/image/banner-event.png" alt="logo" width="130" height="auto">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,32 +22,28 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#" data-toggle="dropdown">Beranda<span>/</span></a>
+                <li class="nav-item" id="home">
+                    <a class="nav-link" href="{{ url('/home') }}">Beranda<span>/</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Juri<span>/</span></a>
+                <li class="nav-item" id="juries">
+                    <a class="nav-link" href="{{ route('general.jury') }}">Juri<span>/</span></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" data-toggle="dropdown">Profil<span>/</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="{{ route('news.index') }}" data-toggle="dropdown">Berita</a>
+                {{-- <li class="nav-item" id="event">
+                    <a class="nav-link" href="{{ route('general.event') }}">Acara<span>/</span></a>
+                </li> --}}
+                <li class="nav-item" id="news">
+                    <a class="nav-link" href="{{ route('general.news') }}">Berita</a>
                 </li>
             </ul>
-            <a href="#" class="ticket">
-                <img src="images/icon/ticket.png" alt="ticket">
+            <a href="{{ route('general.submit_work') }}" class="ticket">
+                <img src="/images/icon/ticket.png" alt="ticket">
                 <span>Daftarkan Karya</span>
             </a>
         </div>
     </div>
 </nav>
-@if (session()->has('child'))
-    @if($child)
-        @include('general/child/'.$child)
-    @else
-        @include('general/child/home')
-    @endif
+@if($child)
+    @include('general/child/'.$child)
 @else
     @include('general/child/home')
 @endif
@@ -63,7 +59,7 @@
       <div class="row">
         <div class="col-md-6 align-self-center">
           <div class="copyright-text">
-            <p><a href="index.html">Eventre</a> &copy; 2021, Designed &amp; Developed by <a href="https://www.linkedin.com/in/rahadyan-rizqy/">Rahadyan Rizqy</a></p>
+            <p><a href="index.html"></a> &copy; 2021, Designed &amp; Developed by <a href="https://www.linkedin.com/in/rahadyan-rizqy/">Rahadyan Rizqy</a></p>
           </div>
         </div>
         <div class="col-md-6">
@@ -72,9 +68,6 @@
       </div>
     </div>
 </footer>
-  
-  
-
 @endsection
 
 @push('script')
@@ -95,4 +88,23 @@
     <script src="/plugins/google-map/gmap.js"></script>
     <!-- Custom Script -->
     <script src="/js/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var url = $(location).attr('href');
+            if (url.includes('juries')) {
+                console.log(url);
+                $('#juries').addClass('active');
+            }
+            else if (url.includes('event')) {
+                $('#event').addClass('active');
+            }
+            else if (url.includes('news')) {
+                $('#news').addClass('active');
+            }
+            else if (url.includes('home')) {
+                $('#home').addClass('active');
+            }
+        });
+    </script>
 @endpush

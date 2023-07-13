@@ -8,6 +8,7 @@
 
     {{-- FROM EVENTRE --}}
     <!-- Bootstrap -->
+    <link rel="icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon"/>
     <link href="/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="/plugins/font-awsome/css/font-awesome.min.css" rel="stylesheet">

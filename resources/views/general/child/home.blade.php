@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-6 align-self-center">
                 <div class="image-block bg-about">
-                    <img class="img-fluid" src="image/about.png" alt="">
+                    <img class="img-about" src="image/about.png" alt="">
                 </div>
             </div>
             <div class="col-lg-8 col-md-6 align-self-center">
@@ -44,9 +44,9 @@
                         {{-- <li class="list-inline-item">
                             <a href="#" class="btn btn-main-md">Buy ticket</a>
                         </li> --}}
-                        <li class="list-inline-item">
+                        {{-- <li class="list-inline-item">
                             <a href="#" class="btn btn-transparent-md">Selengkapnya</a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -60,7 +60,7 @@
   =            Speakers            =
   ===============================-->
   
-<section class="section speakers bg-past-event overlay-lighter">
+<section class="section speakers bg-past-event-2 overlay-lighter">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -100,7 +100,7 @@
                 <!-- Speaker 3 -->
                 <div class="speaker-item">
                     <div class="image d-flex justify-content-center">
-                        <img src="images/speakers/juri-3.jpg" alt="speaker" class="img-fluid">
+                        <img src="images/speakers/juri-3.png" alt="speaker" class="img-fluid">
                     </div>
                     <div class="content text-center">
                         <h5><a href="#">TIMO TJAHJANTO</a></h5>
@@ -132,12 +132,12 @@
   =            Sponsors            =
   ===============================-->
   
-  <section class="sponsors section bg-sponsors overlay-white">
+  <section class="sponsors section bg-past-event overlay-white">
       <div class="container">
           <div class="row">
               <div class="col-12">
                   <div class="section-title">
-                      <h3>Partner dan sponsor <span class="alternate">kami</span></h3>
+                      <h3>Partner dan sponsor <span class="alternate we">kami</span></h3>
                       {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore dolore</p> --}}
                   </div>
               </div>
