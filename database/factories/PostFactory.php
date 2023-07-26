@@ -35,6 +35,7 @@ class PostFactory extends Factory
                 'posted_at' => $this->faker->dateTimeThisYear,
                 'updated_at' => $updatedAt,
                 'author_id' => $authorId,
+                'show' => false,
         ];
     }
 }

@@ -33,8 +33,8 @@
 							<!-- Collapse Header -->
 							<div class="card-header" id="headingOne">
 							  <h5 class="mb-0">
-							    <a data-toggle="collapse" href="#collapse{{$ordinal[$i]}}">
-							      <span class="fa fa-plus-circle"></span>{{$s->title}}
+							    <a data-toggle="" href="" class="label-req">
+							      <span class="fa fa-bookmark"></span>{{$s->title}}
 							    </a>
 							  </h5>
 							</div>
@@ -55,15 +55,18 @@
 							<!-- Collapse Header -->
 							<div class="card-header" id="headingOne">
 							  <h5 class="mb-0">
-							    <a data-toggle="collapse" href="#collapse{{$ordinal[$i]}}">
-							      <span class="fa fa-plus-circle"></span>Form penerimaan karya
+							    <a data-toggle="collapse" href="#collapse{{$ordinal[$i]}}" class="label-req">
+							      <span class="fa fa-bookmark"></span>Form penerimaan karya
 							    </a>
 							  </h5>
 							</div>
 							<!-- Collapse Body -->
 							<div id="collapse{{$ordinal[$i]}}" class="collapse show" data-parent="#accordion">
 							  <div class="card-body">
-                                <iframe id="google-form" src="{{ str_replace('usp=sf_link', 'embedded=true', $rules->externalFormLink) }}" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="yes" style="height: 75vh">Loading…</iframe>
+								<p class="text-center">
+									<a href="{{$rules->externalFormLink}}">Link Form Penerimaan Karya</a>
+								</p>
+                                {{-- <iframe id="google-form" src="{{ str_replace('usp=sf_link', 'embedded=true', $rules->externalFormLink) }}" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="yes" style="height: 75vh">Loading…</iframe> --}}
 							  </div>
 							</div>
 						</div>

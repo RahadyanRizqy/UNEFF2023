@@ -76,10 +76,10 @@
                 <!-- Speaker 1 -->
                 <div class="speaker-item">
                     <div class="image d-flex justify-content-center">
-                        <img src="images/speakers/juri-1.jpg" alt="speaker" class="img-fluid">
+                        <img src="/images/speakers/who.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="content text-center">
-                        <h5><a href="#">PANJI WIBOWO</a></h5>
+                        <h5><a href="#">?</a></h5>
                         <p>Juri 1</p>
                     </div>
                 </div>
@@ -88,10 +88,10 @@
                 <!-- Speaker 2 -->
                 <div class="speaker-item">
                     <div class="image d-flex justify-content-center">
-                        <img src="images/speakers/juri-2.png" alt="speaker" class="img-fluid">
+                        <img src="/images/speakers/who.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="content text-center">
-                        <h5><a href="#">ARIEF RETNO PRIBADI I.C.S</a></h5>
+                        <h5><a href="#">?</a></h5>
                         <p>Juri 2</p>
                     </div>
                 </div>
@@ -100,10 +100,10 @@
                 <!-- Speaker 3 -->
                 <div class="speaker-item">
                     <div class="image d-flex justify-content-center">
-                        <img src="images/speakers/juri-3.png" alt="speaker" class="img-fluid">
+                        <img src="/images/speakers/who.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="content text-center">
-                        <h5><a href="#">TIMO TJAHJANTO</a></h5>
+                        <h5><a href="#">?</a></h5>
                         <p>Juri 3</p>
                     </div>
                 </div>
@@ -131,8 +131,18 @@
   <!--==============================
   =            Sponsors            =
   ===============================-->
-  
   <section class="sponsors section bg-past-event overlay-white">
+    <div class="row">
+        <div class="col-12">
+            <div class="section-title">
+                <h3>Partner dan sponsor <span class="alternate we">kami</span></h3>
+                <h4>Segera...</h4>
+                {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore dolore</p> --}}
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="sponsors section bg-past-event overlay-white d-none">
       <div class="container">
           <div class="row">
               <div class="col-12">
@@ -225,34 +235,3 @@
   <!--============================
   =            Footer            =
   =============================-->
-  
-  <footer class="footer-main">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="block text-center">
-            <div class="footer-logo">
-              <img src="image/profile.png" alt="logo" width="25%" height="auto">
-            </div>
-            <ul class="social-links-footer list-inline">
-              <li class="list-inline-item">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://wa.me/6288804897436/"><i class="fa fa-whatsapp"></i></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.instagram.com/uneffjember/"><i class="fa fa-instagram"></i></a>
-              </li>
-              {{-- <li class="list-inline-item">
-                <a href="https://themefisher.com/"><i class="fa fa-rss"></i></a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://themefisher.com/"><i class="fa fa-vimeo"></i></a>
-              </li> --}}
-            </ul>
-          </div>
-  
-        </div>
-      </div>
-    </div>

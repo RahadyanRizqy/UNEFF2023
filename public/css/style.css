@@ -3284,3 +3284,9 @@ ul.pagination .active a {
 .name .jury-three-name {
   text-align: start;
 }
+
+
+.label-req {
+  font-size: 20px;
+  font-weight: bold;
+}

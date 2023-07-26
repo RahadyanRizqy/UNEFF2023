@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text("content")->nullable();
             $table->timestamp("posted_at");
             $table->timestamp("updated_at")->nullable();
+            $table->boolean("show")->default(true);
             $table->foreignId("author_id");
 
             $table->foreign('author_id')

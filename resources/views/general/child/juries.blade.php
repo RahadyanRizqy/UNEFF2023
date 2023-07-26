@@ -14,7 +14,8 @@
 </section>
 <section class="section single-speaker">
 	<div class="container">
-		<div class="block">
+		<h5 class="text-center">Menunggu sang juri...</h5>
+		<div class="block d-none">
 			<div class="row">
 				<div class="col-lg-5 col-md-6 align-self-md-center">
 					<div class="image-block">

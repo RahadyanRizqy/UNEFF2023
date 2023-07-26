@@ -117,10 +117,6 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        $deleted = request()->input('deleted') === 'true';
-        // $filepath = 'image/' . $post->image;
-        $filepath = 'image/' . 'IMG20230710230108.jpg';
-        dd($deleted);
         // if ($deleted) {
         //     if (File::exists(public_path($filepath))) {
         //         File::delete(public_path($filepath));
@@ -131,7 +127,22 @@ class PostController extends Controller
         //         dd("File doesn't exist");
         //     }
         // }
-        // $post->delete();
+        // $imageExtensions = ['jpg', 'jpeg', 'gif', 'png', 'bmp', 'svg', 'svgz', 'cgm', 'djv', 'djvu', 'ico', 'ief','jpe', 'pbm', 'pgm', 'pnm', 'ppm', 'ras', 'rgb', 'tif', 'tiff', 'wbmp', 'xbm', 'xpm', 'xwd'];
+
+        // $explodeImage = explode('.', 'p');
+        // $extension = end($explodeImage);
+
+        // if(in_array($extension, $imageExtensions))
+        // {
+        //     echo "Image";
+        // }else
+        // {
+        //     $post->delete();
+        // }
+
         // return redirect()->route('posts.index');
+        $post->update([
+            'show' => false
+        ]);
     }
 }
