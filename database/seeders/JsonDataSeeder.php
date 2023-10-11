@@ -13,64 +13,12 @@ class JsonDataSeeder extends Seeder
      */
     public function run(): void
     {
-        $jsons = 
-        [
-            `{
-                "Profile" : {
-                    "Title" : "Profileezzz",
-                    "Banner" : "/image/profile.png",
-                    "Detail" : "Unej Film Festival merupakan program yang digagas oleh HIMAFISI Universitas Jember. Program festival HIMAFISI pertama kali diselenggarakan pada tahun 2016 dengan nama '/Hi-FEST'/ Program ini akan berlangsung setiap tahun dibawah program kerja divisi Media Kreatif HIMAFISI."
-                }
-            }`, 
-            
-            `{
-                "Rules": {
-                    "ExternalFormLink": "https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe2TIOZyk421APzVp-RQfda1ZxuxpNL6lZAP84Zu1-dT0FV6Q\/viewform?usp=sf_link",
-                    "Title": "Penerimaan Karya Unej Film Festival 2023",
-                    "Section": [
-                        {
-                            "Title": "Peraturan",
-                            "List": [
-                                "Ada peraturan yang harus dipatuhi",
-                                "Ada persyaratan yang harus disesuaikan",
-                                "Ada beberapa tambahan yang harus dilihat",
-                                "Peraturan dapat berubah"
-                            ]
-                        },
-                        {
-                            "Title": "Persyaratan",
-                            "List": [
-                                "Persyaratan pertama",
-                                "Persyaratan kedua",
-                                "Persyaratan ketiga",
-                                "Persyaratan keempat"
-                            ]
-                        },
-                        {
-                            "Title": "Tambahan",
-                            "List": [
-                                "Tambahan pertama",
-                                "Tambahan kedua",
-                                "Tambahan ketiga",
-                                "Tambahan keempat"
-                            ]
-                        }
-                    ]
-                }
-            }`
-        ];
-
-        // foreach ($jsons as $json) {
-        //     JsonData::create([
-        //         'data' => $json
-        //     ]);
-        // }
         JsonData::create([
-            'data' => '{"Profile":{"Title":"Profileezzz","Banner":"/image/profile.png","Detail":"Unej Film Festival merupakan program yang digagas oleh HIMAFISI Universitas Jember. Program festival HIMAFISI pertama kali diselenggarakan pada tahun 2016 dengan nama \'Hi-FEST\' Program ini akan berlangsung setiap tahun dibawah program kerja divisi Media Kreatif HIMAFISI."}}'
+            'data' => '{"profile":{"title":"Profile","banner":"\/image\/profile.png","detail":"Unej Film Festival merupakan program yang digagas oleh HIMAFISI Universitas Jember. Program festival HIMAFISI pertama kali diselenggarakan pada tahun 2016 dengan nama \'Hi-FEST\' Program ini akan berlangsung setiap tahun dibawah program kerja divisi Media Kreatif HIMAFISI."}}'
         ]);
 
         JsonData::create([
-            'data' => '{"Rules":{"ExternalFormLink":"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe2TIOZyk421APzVp-RQfda1ZxuxpNL6lZAP84Zu1-dT0FV6Q\/viewform?usp=sf_link","Title":"Penerimaan Karya Unej Film Festival 2023","Section":[{"Title":"Peraturan","List":["Ada peraturan yang harus dipatuhi","Ada persyaratan yang harus disesuaikan","Ada beberapa tambahan yang harus dilihat","Peraturan dapat berubah"]},{"Title":"Persyaratan","List":["Persyaratan pertama","Persyaratan kedua","Persyaratan ketiga","Persyaratan keempat"]},{"Title":"Tambahan","List":["Tambahan pertama","Tambahan kedua","Tambahan ketiga","Tambahan keempat"]}]}}'
+            'data' => '{ "rules": { "externalFormLink": "https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSdJjjHTRWyVOKUJhwHwa3BqWkV2JryDxzkeqJ1_Ub17bEK55Q\/viewform?usp=sf_link", "title": "Penerimaan Karya Unej Film Festival 2023", "section": [ { "title": "Syarat Peserta", "list": [ "Peserta kompetisi merupakan masyarakat umum, mahasiswa, dan pelajar SMA\/SMK sederajat.", "Dengan mendaftar\nkompetisi, peserta telah menyetujui seluruh ketentuan submission UNEJ Film\nFestival 2022. 2. Ketentuan Kompetisi Film Pendek A. Ketentuan Umum" ] }, { "title": "Ketentuan Umum", "list": [ "Pendaftaran submission dibuka tanggal 27 Juli - 07 Oktober 2023.", "Pendaftaran tidak dipungut biaya apapun.", "Karya film yang didaftarkan merupakan film yang diproduksi mulai dari tahun 2021.", "Kategori film yang dapat didaftarkan yaitu film fiksi pelajar & umum, dokumenter, dan film Gati Jemberan.", "Kategori film Gati Jemberan merupakan hasil produksi filmmaker yang berdomisili di daerah Tapal Kuda dan mengangkat tema\/isu yang terjadi di daerah Tapal Kuda.", "Durasi minimal 5 menit dan maksimal 25 menit termasuk opening dan credit title untuk kategori fiksi umum, fiksi pelajar, dokumenter, dan gati jemberan.", "Durasi minimal 2 menit dan maksimal 10 menit\nuntuk kategori film vertikal termasuk opening dan credit title.", "Film yang tidak\nmenggunakan Bahasa Indonesia, wajib menyertakan subtitle Bahasa Indonesia di\ndalam film (tidak dalam file terpisah).", "Setiap peserta wajib\nmenuliskan sinopsis film (maksimal 100 kata) dalam bentuk file PDF.", "Peserta diperbolehkan\nmendaftar lebih dari satu karya film pendek. Masing-masing film dikirim secara\nterpisah dan melengkapi semua persyaratan.", "Film tidak mengandung\nunsur, SARA, dan pornografi.", "Film yang didaftarkan\nmerupakan karya orisinal dan belum pernah dipublikasikan untuk keperluan yang\nbersifat komersial, serta bebas dari setiap kontrak atau ikatan lain.", "Materi film tidak\ndiperbolehkan menggunakan bahan yang melanggar hak cipta.", "Peserta wajib menyertakan surat\npernyataan\/keterangan dari pemegang hak cipta, apabila peserta menggunakan\nbahan non-orisinal", "Panitia tidak\nbertanggung jawab atas segala bentuk gugatan hak cipta yang ditayangkan.", "Panitia berhak menggunakan film yang\ndiikutsertakan untuk kebutuhan publikasi UNEJ Film Festival, namun hak cipta\nfilm tersebut sepenuhnya tetap milik peserta.", "Jika di kemudian hari\nditemukan bukti bahwa karya pemenang diragukan keasliannya, maka panitia berhak\nmembatalkan dan menarik penghargaan\/hadiah yang sudah diberikan." ] }, { "title": "Ketentuan Teknis", "list": [ "File film minimal berkualitas 720p.", "File film dapat\nmenggunakan format dalam bentuk avi, mp4, atau mov.", "Aspek rasio yang digunakan dapat berupa 4:3,\n16:9, atau anamorphic.", "Film boleh berwarna\natau hitam-putih." ] }, { "title": "Pengiriman Film", "list": [ "Peserta wajib mengisi formulir yang tertera\npada link https:\/\/unej.id\/unefformation.", "Berkas film dan soft copy data film harus\ndiunggah satu folder dalam penyimpanan online seperti google drive atau\ndropbox. Pastikan link dapat diakses oleh panitia dan dicantumkan di kolom\n\u201cLink Film\/Data Film\u201d pada formulir submission.", "Di dalam folder, peserta wajib mengunggah : -\nFile film minimal berkualitas 720p dalam bentuk avi, mp4, atau mov. - Trailer\nfilm minimal berkualitas 720p dalam bentuk avi, mp4, atau mov. - Sinopsis film\n(maks. 100 kata) dan biografi singkat sutradara dalam bentuk PDF. - Poster film\nukuran A4 (300 dpi) - Foto pribadi Sutradara dan Still photo\/Grab still film\nsebanyak 3 gambar. - Music release\/keterangan hak cipta (jika bukan karya\norisinal) - Scan kartu identitas produser dan sutradara (KTP, Kartu Mahasiswa,\natau Kartu Pelajar)", "Apabila data yang\ndikirimkan telah berhasil terdaftar, dalam jangka waktu 10 hari, pendaftar akan\nmendapatkan konfirmasi dari panitia UNEFF melalui email.", "Jika film setuju untuk diarsipkan\ndi Unej Film Festival silahkan lampirkan perjanjian kerja sama sesuai format\nyang telah ditentukan, dan di kolom yang telah disediakan" ] } ] } }'
         ]);
     }
 }

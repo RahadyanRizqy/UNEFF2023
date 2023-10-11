@@ -51,6 +51,27 @@
                             <input type="hidden" name="iterable" value="{{$i++}}">
 						</div>
                         @endforeach
+						<div class="card">
+							<!-- Collapse Header -->
+							<div class="card-header" id="headingOne">
+							  <h5 class="mb-0">
+							    <a data-toggle="collapse" href="#collapse{{$ordinal[$i]}}" class="label-req">
+							      <span class="fa fa-bookmark"></span>Proposal arsip
+							    </a>
+							  </h5>
+							</div>
+							<!-- Collapse Body -->
+							<div id="collapse{{$ordinal[$i]}}" class="collapse show" data-parent="#accordion">
+							  <div class="card-body">
+									<div class="row ml-5">
+										<div class="col-md-12 ml-3">
+											<iframe src="https://docs.google.com/document/d/e/2PACX-1vSKsR7FIvkN9ULJOb-zgtmPe02D_N_-Tns-WYXAlbZGYSloXma31MkxA2OFXy2EMzpFoQlWB9ChH3rD/pub?embedded=true" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="yes" style="height: 75vh;"></iframe>
+										</div>
+									</div>
+                                {{-- <iframe id="google-form" src="{{ str_replace('usp=sf_link', 'embedded=true', $rules->externalFormLink) }}" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="yes" style="height: 75vh">Loading…</iframe> --}}
+							  </div>
+							</div>
+						</div>
                         <div class="card">
 							<!-- Collapse Header -->
 							<div class="card-header" id="headingOne">
@@ -63,10 +84,10 @@
 							<!-- Collapse Body -->
 							<div id="collapse{{$ordinal[$i]}}" class="collapse show" data-parent="#accordion">
 							  <div class="card-body">
-								<p class="text-center">
+								{{-- <p class="text-center">
 									<a href="{{$rules->externalFormLink}}">Link Form Penerimaan Karya</a>
-								</p>
-                                {{-- <iframe id="google-form" src="{{ str_replace('usp=sf_link', 'embedded=true', $rules->externalFormLink) }}" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="yes" style="height: 75vh">Loading…</iframe> --}}
+								</p> --}}
+                                <iframe id="google-form" src="{{ str_replace('usp=sf_link', 'embedded=true', $rules->externalFormLink) }}" width="100%" frameborder="0" marginheight="0" marginwidth="0" scrolling="yes" style="height: 75vh">Loading…</iframe>
 							  </div>
 							</div>
 						</div>

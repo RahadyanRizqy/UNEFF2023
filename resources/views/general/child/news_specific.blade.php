@@ -148,7 +148,7 @@
 						@foreach($latest as $l)
 						<div class="media">
 							<div class="media-body">
-								<h6><a href="{{ route('news.specific', $l->id )}}">{{$l->title}}</a></h6>
+								<h6><a href="{{ route('news.route', ['year' => $carbon->parse($l->posted_at)->format('Y'), 'month' => $carbon->parse($l->posted_at)->format('m'), 'slug' => $l->slug]) }}">{{$l->title}}</a></h6>
 								<p href="#"><span class="fa fa-calendar"></span>{{ $carbon->parse($l->posted_at)->format('d M, Y') }}</p>
 							</div>
 						</div>

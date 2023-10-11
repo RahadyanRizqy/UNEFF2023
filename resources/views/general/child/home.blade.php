@@ -71,15 +71,15 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <div class="col-lg-4 col-md-4 col-sm-6">
                 <!-- Speaker 1 -->
                 <div class="speaker-item">
                     <div class="image d-flex justify-content-center">
-                        <img src="/images/speakers/who.jpg" alt="" class="img-fluid">
+                        <img src="/images/speakers/juri1.jpeg" alt="" class="img-fluid">
                     </div>
                     <div class="content text-center">
-                        <h5><a href="#">?</a></h5>
+                        <h5><a href="#">Nur Hidayat<b style="font-size: 65%"> (Monodzky Van Clayten)</b></a></h5>
                         <p>Juri 1</p>
                     </div>
                 </div>
@@ -88,15 +88,15 @@
                 <!-- Speaker 2 -->
                 <div class="speaker-item">
                     <div class="image d-flex justify-content-center">
-                        <img src="/images/speakers/who.jpg" alt="" class="img-fluid">
+                        <img src="/images/speakers/juri2.jpeg" alt="" class="img-fluid">
                     </div>
                     <div class="content text-center">
-                        <h5><a href="#">?</a></h5>
+                        <h5><a href="#">Arly Zainsty, M.Sn.</a></h5>
                         <p>Juri 2</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
+            {{-- <div class="col-lg-4 col-md-4 col-sm-6">
                 <!-- Speaker 3 -->
                 <div class="speaker-item">
                     <div class="image d-flex justify-content-center">
@@ -107,7 +107,7 @@
                         <p>Juri 3</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JsonData;
 use App\Models\Post;
 use App\Models\Profile;
 use App\Models\Rule;
@@ -15,13 +16,6 @@ class DashboardController extends Controller
 {
 
     // public $rules = new Rule('json/rules.json');
-    private $rules;
-    private $profile; 
-    public function __construct()
-    {
-        $this->rules = new Rule('json/rules.json');
-        $this->profile = new Profile('json/profile.json');
-    }
 
     public function index()
     {
@@ -43,7 +37,7 @@ class DashboardController extends Controller
         }
 
         if ($child == 'rules') {
-            $rules = new Rule('json/rules.json');
+            $rules = json_decode(JsonData::find(2)->data, false)->rules;
             return view('dashboard.layout', [
                 'child' => $child,
                 'rules' => $rules,
@@ -51,7 +45,7 @@ class DashboardController extends Controller
         }
 
         if ($child == 'profile') {
-            $profile = $this->profile;
+            $profile = json_decode(JsonData::find(1)->data, false)->profile;
             return view('dashboard.layout', [
                 'child' => $child,
                 'profile' => $profile,
@@ -62,22 +56,22 @@ class DashboardController extends Controller
 
     public function updateRules(Request $request)
     {
-        $this->rules->update($request);
+        JsonData::where('id', 2)->update(['data' => $request->getContent()]);
     }
 
     public function updateProfile(Request $request)
     {
-        $this->profile->update($request);
+        JsonData::where('id', 1)->update(['data' => $request->getContent()]);
     }
 
     public function getProfile()
     {
-        return response()->json($this->profile);
+        return response()->json(json_decode(JsonData::find(2)->data, false));
     }
 
     public function getRules()
     {
-        return response()->json($this->rules);
+        return response()->json(json_decode(JsonData::find(1)->data, false));
     }
     // Rules
     // public function updateRules(Request $request)

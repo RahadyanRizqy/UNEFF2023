@@ -111,6 +111,18 @@ class PostController extends Controller
             throwException($e);
         }
     }
+    
+    public function showPost(Post $post)
+    {
+        $post->update(['show' => true]);
+        return redirect()->route('posts.index');
+    }
+
+    public function hidePost(Post $post)
+    {
+        $post->update(['show' => false]);
+        return redirect()->route('posts.index');
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -139,10 +151,7 @@ class PostController extends Controller
         // {
         //     $post->delete();
         // }
-
-        // return redirect()->route('posts.index');
-        $post->update([
-            'show' => false
-        ]);
+        $post->delete();
+        return redirect()->route('posts.index');
     }
 }

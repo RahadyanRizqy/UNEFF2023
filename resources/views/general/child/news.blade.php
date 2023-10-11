@@ -23,7 +23,7 @@
 							<div class="m-auto">
 								<div class="blog-post">
 									<div class="post-thumb">
-										<a href="{{ route('news.specific', $p->id )}}">
+										<a href="{{ route('news.route', ['year' => $carbon->parse($p->posted_at)->format('Y'), 'month' => $carbon->parse($p->posted_at)->format('m'), 'slug' => $p->slug]) }}">
 											<img src="{{$p->image}}" alt="post-image" class="post-fluid">
 										</a>
 									</div>
@@ -32,7 +32,7 @@
 											<h4>{{ $carbon->parse($p->posted_at)->format('d') }}<span>{{ $carbon->parse($p->posted_at)->format('M') }}</span></h4>
 										</div>
 										<div class="post-title">
-											<h2><a href="{{ route('news.specific', $p->id )}}">{{$p->title}}</a></h2>
+											<h2><a href="{{ route('news.route', ['year' => $carbon->parse($p->posted_at)->format('Y'), 'month' => $carbon->parse($p->posted_at)->format('m'), 'slug' => $p->slug]) }}">{{$p->title}}</a></h2>
 										</div>
 										<div class="post-meta">
 											<ul class="list-inline">
@@ -56,7 +56,7 @@
 							@foreach($latest as $l)
 							<div class="media">
 								<div class="media-body">
-									<h6><a href="{{ route('news.specific', $l->id )}}">{{$l->title}}</a></h6>
+									<h6><a href="{{ route('news.route', ['year' => $carbon->parse($l->posted_at)->format('Y'), 'month' => $carbon->parse($l->posted_at)->format('m'), 'slug' => $l->slug]) }}">{{$l->title}}</a></h6>
 									<p href="#"><span class="fa fa-calendar"></span>{{ $carbon->parse($l->posted_at)->format('d F Y') }}</p>
 								</div>
 							</div>

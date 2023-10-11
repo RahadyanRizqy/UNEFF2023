@@ -1,6 +1,16 @@
 <main class="dash-content">
     <div class="container-fluid">
         <a href="{{ route('posts.create') }}" class="btn btn-choco"> + Tambah Postingan </a>
+        {{-- <form action="{{ route('dashboard.post.hideall', $post->id) }}" method="post" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
+            <button type="submit" class="dropdown-item showing-btn">Tampilkan</button>
+        </form>
+        <form action="{{ route('dashboard.post.showall', $post->id) }}" method="post" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
+            <button type="submit" class="dropdown-item showing-btn">Tampilkan</button>
+        </form> --}}
         <div class="row mt-4" id="posts">
             @foreach ($posts as $post)
             <div class="col-lg-4">
@@ -23,6 +33,16 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="{{ route('posts.show', $post->id) }}">Lihat</a>
                                     <a class="dropdown-item" href="{{ route('posts.edit', $post->id) }}">Ubah</a>
+                                    <form action="{{ route('dashboard.post.show', $post->id) }}" method="post" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('PUT')
+                                        <button type="submit" class="dropdown-item showing-btn">Tampilkan</button>
+                                    </form>
+                                    <form action="{{ route('dashboard.post.hide', $post->id) }}" method="post" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('PUT')
+                                        <button type="submit" class="dropdown-item hiding-btn">Sembunyikan</button>
+                                    </form>
                                     <form class="delete-form" action="{{ route('posts.destroy', $post->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')

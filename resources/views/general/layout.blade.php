@@ -60,13 +60,21 @@
                     </div>
                     <ul class="social-links-footer list-inline">
                         <li class="list-inline-item">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li class="list-inline-item">
                             <a href="https://wa.me/6288804897436/"><i class="fa fa-whatsapp"></i></a>
                         </li>
                         <li class="list-inline-item">
                             <a href="https://www.instagram.com/uneffjember/"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                    <ul style="text-decoration: none; list-style-type: none;" class="mt-3">
+                        <li>registrasi forkom 
+                            <a href="https://unej.id/FORKOMUNEFF2023/" style="color:coral;">unej.id/FORKOMUNEFF2023</a>
+                        </li>
+                        <li>submisi layar guyub 
+                            <a href="https://unej.id/layarguyubuneff/" style="color:coral;">unej.id/layarguyubuneff</a>
+                        </li>
+                        <li>guidebook forkom
+                            <a href="https://unej.id/guidebookforkomuneff/" style="color:coral;">unej.id/guidebookforkomuneff</a>
                         </li>
                     </ul>
                 </div>
@@ -80,7 +88,7 @@
       <div class="row">
         <div class="col-md-6 align-self-center">
           <div class="copyright-text">
-            <p><a href="index.html"></a> &copy; 2021, Designed &amp; Developed by <a href="https://www.linkedin.com/in/rahadyan-rizqy/">Rahadyan Rizqy</a></p>
+            {{-- <p><a href="index.html"></a> &copy; 2021, Designed &amp; Developed by <a href="#">Rahadyan Rizqy</a></p> --}}
           </div>
         </div>
         <div class="col-md-6">

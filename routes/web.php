@@ -39,6 +39,8 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.
 Route::get('dashboard/{child}', [DashboardController::class, 'child'])->name('dashboard.child');
 Route::resource('dashboard/posts', PostController::class);
 
+Route::put('dashboard/posts/{post}/show', [PostController::class, 'showPost'])->name('dashboard.post.show');
+Route::put('dashboard/posts/{post}/hide', [PostController::class, 'hidePost'])->name('dashboard.post.hide');
 // Route::get('/programs', [DashboardController::class, 'getJson']);
 // Route::put('/programs/update', [DashboardController::class, 'updateJson'])->name('updateJson');
 // Route::get('/programs2', [DashboardController::class, 'tampung']);
@@ -53,4 +55,8 @@ Route::get('news', [GeneralController::class, 'news'])->name('general.news');
 Route::get('juries', [GeneralController::class, 'jury'])->name('general.jury');
 Route::get('event', [GeneralController::class, 'profile_detail'])->name('general.event');
 Route::get('submit_work', [GeneralController::class, 'submit_work'])->name('general.submit_work');
-Route::get('news/{post}', [GeneralController::class, 'news_specific'])->name('news.specific');
+// Route::get('news/{post}', [GeneralController::class, 'news_specific'])->name('news.specific');
+
+Route::get('news/{year}', [GeneralController::class, 'news_route']);
+Route::get('news/{year}/{month}', [GeneralController::class, 'news_route']);
+Route::get('news/{year}/{month}/{slug}', [GeneralController::class, 'news_route'])->name('news.route');

@@ -14,24 +14,24 @@
 </section>
 <section class="section single-speaker">
 	<div class="container">
-		<h5 class="text-center">Menunggu sang juri...</h5>
-		<div class="block d-none">
+		{{-- <h5 class="text-center">Menunggu sang juri...</h5> --}}
+		<div class="block">
 			<div class="row">
 				<div class="col-lg-5 col-md-6 align-self-md-center">
 					<div class="image-block">
-						<img src="images/speakers/juri-1.jpg" alt="speaker" width="10%" height="auto">
+						<img src="images/speakers/juri1.jpeg" alt="speaker" width="10%" height="auto">
 					</div>
 				</div>
 				<div class="col-lg-7 col-md-6 align-self-center">
 					<div class="content-block">
 						<div class="name">
-							<h3 class="jury-one-name">Panji Wibowo</h3>
+							<h3 class="jury-one-name">Nur Hidayat (Monodzky Van Clayten)</h3>
 						</div>
 						<div class="profession">
 							<p>Sutradara</p>
 						</div>
 						<div class="details">
-							<p align="justify">Wibowo menyelesaikan pendidikan sarjananya di Fakultas Film dan Televisi (FFTV) Institut Kesenian Jakarta (IKJ) jurusan Penyutradaraan dan Studi Film. Ia menghabiskan beberapa waktu belajar di Sekolah Filsafat Driyarkara (1999- 2002) Aktif dalam pembentukan Badan Perfilman Indonesia (BPI) dan Perhimpunan Reviewer Film Indonesia (Kafein).Sejak tahun 1996 menjadi sutradara film lepas dan telah bekerja di berbagai program audio visual, program televisi, video musik , film komersial, film pendek dan dokumenter. Sejak 2002, ia fokus pada studi film, pelatihan film, penulisan kreatif, dan penyutradaraan film.
+							<p align="justify">Nur Hidayat alias Monodzky Van Clayten merupakan sinematografer yang berasal dari Indonesia. Ia lahir di Jakarta pada 28 November 1962. Nur Hidayat (Monodzky) menempuh pendidikan di SMA Lab School Jakarta. Ia melanjutkan pendidikan di Institut Kesenian Jakarta dan melanjutkan S2 dan S3 di Institut Seni Indonesia Surakarta. Beliau telah menciptakan beberapa judul karya, yaitu antara lain yang berjudul, Bulan Tertusuk Ilalang 1995, Jamilah dan Presiden 2009 dan masih banyak lain karya yang telah dibuat. Pada film yang berjudul Sebelum Pagi Terulang Kembali 2014, telah mendapatkan penghargaan: Best Cinematography Festival Film Indonesia 2014. Ia juga pernah mengajar dan memberi pelatihan di Institut Kesenian Jakarta, President University, SAE Jakarta, Komunitas Jeruk Purut dan di tempat-tempat lainnya.
 							<br>
 							</p>
 						</div>
@@ -48,7 +48,7 @@
 							<p class="jury-two-name">Sinematografer</p>
 						</div>
 						<div class="details">
-							<p align="justify">...
+							<p align="justify">Arly Zainsty, M.Sn., adalah seorang sutradara dokumeter dan program TV yang pernah berkiprah di stasiun TV Trans 7. Beliau dikenal dengan filmnya dokumenter berjudul "Pakubuwono XII" yang meraih penghargaan Citra. Selain itu, Arly Zainsty, M.Sn., juga menjabat sebagai Kepala Program Studi Film dan Televisi di Fakultas Film dan Televisi, Institut Kesenian Jakarta hingga sekarang.
 							<br>
 							</p>
 						</div>
@@ -56,11 +56,11 @@
 				</div>
 				<div class="col-lg-5 col-md-6 align-self-md-center">
 					<div class="image-block">
-						<img src="images/speakers/juri-2.png" alt="speaker" width="10%" height="auto">
+						<img src="images/speakers/juri2.jpeg" alt="speaker" width="10%" height="auto">
 					</div>
 				</div>
 			</div>
-			<div class="row row-margin">
+			<div class="row row-margin d-none">
 				<div class="col-lg-5 col-md-6 align-self-md-center">
 					<div class="image-block">
 						<img src="images/speakers/juri-3.png" alt="speaker" width="10%" height="auto">

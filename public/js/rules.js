@@ -6,10 +6,10 @@ $(document).ready(function() {
 
     $('#save-button').on('click', function() {
         var newData = {
-            'Rules': {
-                'ExternalFormLink': $('#gform-link').text(),
-                'Title': $('#title').text(),
-                'Section': []
+            'rules': {
+                'externalFormLink': $('#gform-link').text(),
+                'title': $('#title').text(),
+                'section': []
             }
         };
 
@@ -21,14 +21,14 @@ $(document).ready(function() {
                 sectionList.push($(this).text());
             });
 
-            newData['Rules']['Section'].push({
-                'Title': sectionTitle,
-                'List': sectionList
+            newData['rules']['section'].push({
+                'title': sectionTitle,
+                'list': sectionList
             });
         });
 
         var jsonData = {
-            'Rules': newData['Rules']
+            'rules': newData['rules']
         };
 
         $.ajaxSetup({
