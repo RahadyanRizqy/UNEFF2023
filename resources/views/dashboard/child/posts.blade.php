@@ -55,9 +55,9 @@
                     </div>
                     <div class="image-container">
                         @if (strpos($post->image, 'png') || strpos($post->image, 'jpg'))
-                            <img src="/image/{{ $post->image }}" alt="" class="post-img">
+                            <img src="{{ asset('image/'.$post->image) }}" alt="" class="post-img">
                         @else
-                            <img src="{{ $post->image }}" alt="" class="post-img">
+                            <img src="{{ asset('image/'.$post->image) }}" alt="" class="post-img">
                         @endif
                     </div>
                     <div class="card-body">{{ $str->limit($post->content, $limit = 88, $end = '...') }}</div>
