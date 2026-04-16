@@ -132,16 +132,16 @@
   =            Sponsors            =
   ===============================-->
   <section class="sponsors section bg-past-event overlay-white">
-    <div class="row">
-        <div class="col-12">
-            <div class="section-title">
-                <h3>Partner dan sponsor <span class="alternate we">kami</span></h3>
-                <!-- <h4>Segera...</h4>
-                {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore dolore</p> --}} -->
-                <img src="{{ asset('image/sponsors-uneff2023.png') }}" alt="logo" width="auto" height="auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h3>Partner dan sponsor <span class="alternate we">kami</span></h3>
+                        <img src="{{ asset('image/sponsors-uneff2023.png') }}">
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
   </section>
   <section class="sponsors section bg-past-event overlay-white d-none">
       <div class="container">
