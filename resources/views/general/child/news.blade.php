@@ -24,7 +24,7 @@
 								<div class="blog-post">
 									<div class="post-thumb">
 										<a href="{{ route('news.route', ['year' => $carbon->parse($p->posted_at)->format('Y'), 'month' => $carbon->parse($p->posted_at)->format('m'), 'slug' => $p->slug]) }}">
-											<img src="{{ asset('storage/uploads/'.$p->image) }}" alt="post-image" class="post-fluid">
+											<img src="{{ asset('image/'.$p->image) }}" alt="post-image" class="post-fluid">
 										</a>
 									</div>
 									<div class="post-content">

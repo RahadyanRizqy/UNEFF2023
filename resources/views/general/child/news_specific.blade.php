@@ -5,7 +5,7 @@
 				<div class="block">
 					<article class="blog-post single">
 						<div class="post-thumb">
-							<img src="{{ asset('storage/uploads/'.$news_post->image) }}" alt="post-image" class="" width="100%" height="auto">
+							<img src="{{ asset('image/'.$news_post->image) }}" alt="post-image" class="" width="100%" height="auto">
 						</div>
 						<div class="post-content">
 							<div class="date">
