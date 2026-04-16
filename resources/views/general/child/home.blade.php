@@ -136,8 +136,9 @@
         <div class="col-12">
             <div class="section-title">
                 <h3>Partner dan sponsor <span class="alternate we">kami</span></h3>
-                <h4>Segera...</h4>
-                {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore dolore</p> --}}
+                <!-- <h4>Segera...</h4>
+                {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore dolore</p> --}} -->
+                <img src="{{ asset('image/sponsors-uneff2023.png') }}" alt="logo" width="auto" height="auto">
             </div>
         </div>
     </div>
