@@ -135,9 +135,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="section-title">
-                        <h3>Partner dan sponsor <span class="alternate we">kami</span></h3>
-                        <img src="{{ asset('image/sponsors-uneff2023.png') }}">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="section-title mb-0">
+                            <h3 class="mb-0">Partner dan sponsor <span class="alternate we">kami</span></h3>
+                        </div>
+                        <div class="section-image">
+                            <img src="{{ asset('image/sponsors-uneff2023.png') }}">
+
+                        </div>
                     </div>
                 </div>
             </div>
